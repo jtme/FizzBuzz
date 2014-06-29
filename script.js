@@ -11,7 +11,7 @@ $(document).ready(function () {
                 // create a loop, fizz/buzz it
                 for (var n = 1; n <= givennumber; n++) {
                     if (n % 15 === 0) {
-                        addtolist("fizz-buzz");
+                        addtolist("fizz buzz");
                      } else if (n % 3 === 0){
                         addtolist("fizz");
                      } else if (n % 5 === 0){ 
@@ -21,17 +21,19 @@ $(document).ready(function () {
                      }          
                 }
         }else{
-            alert("Please input valid number between 1 an 100.")
+            alert("Please input valid NUMBER between 1 an 100.")
         };
     };
 
    // on click action 
     $('#submit').on('click', function(event) {
         event.preventDefault();
+        var givenmenumber = +$('#givemenumber').val();
         // reset list
         $('#number-list').empty();
-        fizzbuzzit($('#givemenumber').val());
-        $('#givemenumber').val('');
+        fizzbuzzit(givenmenumber);
+        //$('#givemenumber').val('');
+        givenmenumber = '';
     });
 
 })
