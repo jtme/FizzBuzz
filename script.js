@@ -31,6 +31,7 @@ $(document).ready(function () {
         // reset list
         $('#number-list').empty();
         fizzbuzzit($('#givemenumber').val());
+        $('#givemenumber').val('');
     });
 
 })
