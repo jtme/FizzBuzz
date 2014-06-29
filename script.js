@@ -28,9 +28,9 @@ $(document).ready(function () {
    // on click action 
     $('#submit').on('click', function(event) {
         event.preventDefault();
+        // reset list
+        $('#number-list').empty();
         fizzbuzzit($('#givemenumber').val());
     });
-
-
 
 })
