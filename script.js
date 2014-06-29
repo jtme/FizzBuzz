@@ -1,9 +1,11 @@
 $(document).ready(function () {
 
+    // add to list function 
     var addtolist = function(item){
         $('#number-list').append( "<li>"+item+"</li>" );
     };
 
+    // fizz buzz 
     var fizzbuzzit = function(givennumber) {
         if (givennumber >= 1 && givennumber <= 100) {
                 // create a loop, fizz/buzz it
@@ -23,7 +25,7 @@ $(document).ready(function () {
         };
     };
 
-
+   // on click action 
     $('#submit').on('click', function(event) {
         event.preventDefault();
         fizzbuzzit($('#givemenumber').val());
